@@ -14,7 +14,7 @@ public class GamePiece : MonoBehaviour
     public void Move(int x)
     {
         position += x;
-        transform.position
+        transform.position += UnityEngine.Vector3.right*x;
 
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using JetBrains.Annotations;
 using Unity.Mathematics;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
@@ -13,12 +15,11 @@ public class GameLogic : MonoBehaviour
             players[i] = new Player();
         }
         int winnerFound = -1;
-        Dice dice = new Dice();
         while (winnerFound < 0)
         {
             for (int i = 0; i < players.Length; i++)
             {
-                int diceRoll = dice.RollDice();
+                int diceRoll = Dice();
                 bool winner = players[i].DecideAndMovePiece(diceRoll);
                 if (winner)
                 {
@@ -29,9 +30,12 @@ public class GameLogic : MonoBehaviour
         }
         Console.WriteLine("winner is player " + winnerFound);
     }
-    public int RollDice()
+    public int Dice()
     {
-        return Random.Range(1, 7);
+        int genNumber = UnityEngine.Random.Range(1, 7);
+        Debug.Log(genNumber);
+        return genNumber;
+
     }
 
 }

@@ -1,9 +1,9 @@
-﻿Player[] players = new Player[4];
+﻿Player[] players = new Player[4];                   // 4 spiller bliver lavet 
 for (int i = 0; i < players.Length; i++)
 {
     players[i] = new Player();
 }
-int winnerFound = -1;
+int winnerFound = -1; 
 Dice dice = new Dice();
 while (winnerFound < 0)
 {
@@ -28,7 +28,7 @@ public class GamePiece
 
     public void Move(int x)
     {
-        position += x;
+        position +=  x;
     }
     
 }

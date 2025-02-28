@@ -8,11 +8,14 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < pieces.Length; i++)
         {
-            pieces[i] = Instantiate(Gamepiece, new Vector3(0, 0, 0), Quaternion.identity);
+            pieces[i] = Instantiate(Gamepiece,(startPosition.transform.position), Quaternion.identity);
         }
     }
+    public GameObject startPosition;
+    [SerializeField]
     GameObject[] pieces = new GameObject[4];
     public GameObject Gamepiece;
+    
     
     public bool DecideAndMovePiece(int rollValue)
     {
@@ -31,17 +34,25 @@ public class Player : MonoBehaviour
         {
             for (int i = 0; i < pieces.Length; i++)
             {
-                if (pieces[i].GetComponent<GamePiece>().Position+rollValue <= 40)
+                if (pieces[i].GetComponent<GamePiece>().Position+rollValue <= 40 && pieces[i].GetComponent<GamePiece>().Position+rollValue > 0)
                 {
                     pieces[i].GetComponent<GamePiece>().Move(rollValue);
                     return false;
                 }
             }
         }
+        for (int i = 0; i < pieces.Length; i++)
+        {
+            if (pieces[i].GetComponent<GamePiece>().Position+rollValue < 40 && pieces[i].GetComponent<GamePiece>().Position+rollValue > 0)
+            {
+                pieces[i].GetComponent<GamePiece>().Move(rollValue);
+                return false;
+            }
+        }
         for (int i = 0; i < pieces.Length; i++) {
             if (pieces[i].GetComponent<GamePiece>().Position < 40)
             {
-                pieces[i].GetComponent<GamePiece>().Move(rollValue);
+
                 return false;
             }
         }

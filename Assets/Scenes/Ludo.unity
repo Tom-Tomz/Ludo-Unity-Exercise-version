@@ -362,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192869605}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -381,7 +381,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16531e46b7f7bf4fa1dedfad1a7ac4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gamepiece: {fileID: 0}
+  startPosition: {fileID: 11054582}
+  pieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Gamepiece: {fileID: 2074092655631099920, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
 --- !u!1 &204986482
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,63 +634,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542868111}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &803637554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2074092655631099920, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_Name
-      value: GamePiece
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122465680935560572, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
 --- !u!1 &993225728
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +678,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130cfa9e2ff55084383cd18c4f9a4e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 1219390992}
+  - {fileID: 1890531238}
+  - {fileID: 192869607}
+  - {fileID: 1189235783}
 --- !u!1 &1189235781
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +727,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16531e46b7f7bf4fa1dedfad1a7ac4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gamepiece: {fileID: 0}
+  startPosition: {fileID: 1824316172}
+  pieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Gamepiece: {fileID: 2074092655631099920, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
 --- !u!1 &1219390990
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +778,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16531e46b7f7bf4fa1dedfad1a7ac4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gamepiece: {fileID: 0}
+  startPosition: {fileID: 542868111}
+  pieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Gamepiece: {fileID: 2074092655631099920, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
 --- !u!1 &1372527823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,16 +973,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16531e46b7f7bf4fa1dedfad1a7ac4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gamepiece: {fileID: 0}
+  startPosition: {fileID: 165399343}
+  pieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Gamepiece: {fileID: 2074092655631099920, guid: 307943d2c9e13244daea4d3b20ff40eb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 204986485}
   - {fileID: 1372527824}
-  - {fileID: 993225729}
   - {fileID: 1219390991}
   - {fileID: 1890531237}
   - {fileID: 192869606}
   - {fileID: 1189235782}
-  - {fileID: 803637554}
+  - {fileID: 993225729}

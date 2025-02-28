@@ -6,14 +6,24 @@ using UnityEditor.Search;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
+
 {
+    public Player[] players = new Player[4];
     private void Start()
     {
-        Player[] players = new Player[4];
-        for (int i = 0; i < players.Length; i++)
-        {
-            players[i] = new Player();
-        }
+        
+        // for (int i = 0; i < players.Length; i++)
+        // {
+        //     players[i] = new Player();
+        // }
+        
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("Start cororutine");
+        yield return new WaitForSeconds(1);
         int winnerFound = -1;
         while (winnerFound < 0)
         {
@@ -29,6 +39,7 @@ public class GameLogic : MonoBehaviour
             }
         }
         Console.WriteLine("winner is player " + winnerFound);
+        Debug.Log("Slut cororutine");
     }
     public int Dice()
     {
